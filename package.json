@@ -1,0 +1,36 @@
+{
+  "name": "dual-hooks",
+  "version": "0.0.0",
+  "description": "Webhooks for dualapi",
+  "main": "index.js",
+  "private": false,
+  "scripts": {
+    "test": "mocha",
+    "ci-test": "istanbul cover _mocha -- -R tap \"./test/*.js\" > test.tap && istanbul report clover",
+    "lint": "jshint *.js test src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:plediii/dual-hooks.git"
+  },
+  "keywords": [
+    "dualapi"
+  ],
+  "author": "Paul J. Ledbetter III",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plediii/dual-hooks.git/issues"
+  },
+  "homepage": "https://github.com/plediii/dual-hooks.git",
+  "devDependencies": {
+    "dual-protocol": "^0.4.6",
+    "istanbul": "^0.4.3",
+    "jshint": "^2.9.2",
+    "lint": "^1.1.2",
+    "mocha": "^2.4.5",
+    "pre-commit": "^1.1.2"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}
